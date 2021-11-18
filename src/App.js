@@ -1,7 +1,15 @@
-import './App.css';
+import { SnackbarProvider } from 'notistack';
+import AppProvider from './contexts/App';
+import MacroGrid from './grid/Grid';
 
-function App() {
-  return <div />;
-}
+const App = () => (
+  <div>
+    <SnackbarProvider>
+      <AppProvider>
+        <MacroGrid />
+      </AppProvider>
+    </SnackbarProvider>
+  </div>
+);
 
 export default App;
